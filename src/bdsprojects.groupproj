@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DD42031E-6EB6-4100-8B8D-19C6AA795749}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="dll\CalDevLib.cbproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CBuilderClient\TestDll.cbproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CalDevLib">
+        <MSBuild Projects="dll\CalDevLib.cbproj"/>
+    </Target>
+    <Target Name="CalDevLib:Clean">
+        <MSBuild Projects="dll\CalDevLib.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CalDevLib:Make">
+        <MSBuild Projects="dll\CalDevLib.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestDll">
+        <MSBuild Projects="CBuilderClient\TestDll.cbproj"/>
+    </Target>
+    <Target Name="TestDll:Clean">
+        <MSBuild Projects="CBuilderClient\TestDll.cbproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestDll:Make">
+        <MSBuild Projects="CBuilderClient\TestDll.cbproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CalDevLib;TestDll"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CalDevLib:Clean;TestDll:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CalDevLib:Make;TestDll:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

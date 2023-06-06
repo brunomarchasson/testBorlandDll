@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/05/24 09:36:20.000.996,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2023/05/24 09:36:21.000.265,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Project1PCH1.h</Transaction>
+    <Transaction>2023/05/24 09:39:49.000.847,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\ICalDev.h</Transaction>
+    <Transaction>2023/05/24 09:49:05.000.393,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\CalDev.cpp</Transaction>
+    <Transaction>2023/05/24 09:53:45.000.168,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Win32\Debug\CalDevLib.lib</Transaction>
+    <Transaction>2023/05/24 09:57:14.000.411,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Project1PCH1.h=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\TestDllPCH1.h</Transaction>
+    <Transaction>2023/05/24 09:57:14.000.425,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Project1.cbproj=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\TestDll.cbproj</Transaction>
+    <Transaction>2023/05/24 09:57:45.000.929,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Unit1.cpp=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\TestDllMain.cpp</Transaction>
+    <Transaction>2023/05/24 09:57:45.000.929,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Unit1.h=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\TestDllMain.h</Transaction>
+    <Transaction>2023/05/24 09:57:45.000.929,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Unit1.fmx=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\TestDllMain.fmx</Transaction>
+    <Transaction>2023/05/24 10:04:35.000.877,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\CalDevLibrary\Win64\Debug\CalDevLib.a</Transaction>
+    <Transaction>2023/05/24 10:14:19.000.577,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\CalDevLibrary\Win32\Debug\CalDevLib.lib=</Transaction>
+    <Transaction>2023/05/24 10:14:22.000.013,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\CalDevLibrary\Win64\Debug\CalDevLib.a=</Transaction>
+    <Transaction>2023/06/05 15:41:40.000.417,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\ICalDev.h</Transaction>
+    <Transaction>2023/06/05 15:43:20.000.093,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\Win32\Debug\TestDll.dll</Transaction>
+    <Transaction>2023/06/05 15:43:51.000.990,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\Win32\Debug\TestDll.dll=</Transaction>
+    <Transaction>2023/06/05 15:44:09.000.580,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\Win32\Release\CalDevLib.lib</Transaction>
+    <Transaction>2023/06/05 15:44:09.000.516,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\Win32\Release\CalDevLib.dll</Transaction>
+    <Transaction>2023/06/05 15:52:20.000.238,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\Win32\Release\CalDevLib.dll=</Transaction>
+    <Transaction>2023/06/05 15:52:22.000.232,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\Win32\Release\CalDevLib.lib=</Transaction>
+    <Transaction>2023/06/06 09:37:17.000.364,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\ICalDev.h=</Transaction>
+    <Transaction>2023/06/06 09:37:33.000.629,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\CalDevLib.h</Transaction>
+    <Transaction>2023/06/06 09:58:21.000.530,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\CalDevLib.h=</Transaction>
+    <Transaction>2023/06/06 13:27:10.938,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\CalDevLib.h</Transaction>
+  </Transactions>
+</BorlandProject>

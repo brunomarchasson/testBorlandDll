@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/06/06 09:49:47.000.069,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Project2PCH1.h</Transaction>
+    <Transaction>2023/06/06 09:49:47.000.096,=C:\Users\bruno\Documents\Embarcadero\Studio\Projets\File2.cpp</Transaction>
+    <Transaction>2023/06/06 09:53:06.000.562,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Project2PCH1.h=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\TestDll2PCH1.h</Transaction>
+    <Transaction>2023/06/06 09:53:06.000.675,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\Project2.cbproj=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\TestDll2.cbproj</Transaction>
+    <Transaction>2023/06/06 09:53:06.000.663,C:\Users\bruno\Documents\Embarcadero\Studio\Projets\File2.cpp=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\File2.cpp</Transaction>
+    <Transaction>2023/06/06 09:53:23.000.152,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\File2.cpp=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\TestDll2Main.cpp</Transaction>
+    <Transaction>2023/06/06 09:54:45.000.099,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\File1.h</Transaction>
+    <Transaction>2023/06/06 09:55:04.000.174,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\File1.h=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\TestDll2Main.h</Transaction>
+    <Transaction>2023/06/06 09:56:45.000.394,=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\dll\CalDev.cpp</Transaction>
+    <Transaction>2023/06/06 13:19:03.379,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\LalDevLibPCH1.h=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\TestDll2PCH1.h</Transaction>
+    <Transaction>2023/06/06 13:19:03.393,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\LalDevLib.cbproj=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\TestDll2.cbproj</Transaction>
+    <Transaction>2023/06/06 13:19:10.045,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\CalDevLibPCH1.h=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\LalDevLibPCH1.h</Transaction>
+    <Transaction>2023/06/06 13:19:10.059,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\CalDevLib.cbproj=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\LalDevLib.cbproj</Transaction>
+    <Transaction>2023/06/06 13:19:54.867,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\CalDevLib.cpp=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\TestDll2Main.cpp</Transaction>
+    <Transaction>2023/06/06 13:20:07.398,C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\CalDevLib.h=C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\src\dll\TestDll2Main.h</Transaction>
+  </Transactions>
+</BorlandProject>

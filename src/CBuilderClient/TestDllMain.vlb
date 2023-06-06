@@ -1,0 +1,13 @@
+﻿[InitButton]
+Coordinates=10,10,69,58
+
+[HiButton]
+Coordinates=10,78,64,58
+
+[]
+Coordinates=216,1,44,58
+Visible=True
+
+[Edit1]
+Coordinates=98,1,44,58
+
