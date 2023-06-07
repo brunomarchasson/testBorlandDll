@@ -5,11 +5,12 @@
       "cflags!": [ "-fno-exceptions" ],
       "cflags_cc!": [ "-fno-exceptions" ],
       "sources": [
-        "./src/caldev.cpp",
+        "./src/_caldev.cpp",
         "./src/asyncWorker.cc",
         "./src/index.cpp"
       ],
       "include_dirs": [
+        "../dll",
         "<!@(node -p \"require('node-addon-api').include\")",
       ],
     "ldflags": [

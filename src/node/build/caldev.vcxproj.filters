@@ -60,7 +60,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\caldev.cpp">
+    <ClCompile Include="..\src\_caldev.cpp">
       <Filter>..\src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\asyncWorker.cc">

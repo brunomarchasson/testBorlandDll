@@ -5,9 +5,8 @@
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Win32</Platform>
-        <CC_Suffix Condition="'$(CC_Suffix)'==''">c</CC_Suffix>
-        <TargetedPlatforms>1</TargetedPlatforms>
+        <Platform Condition="'$(Platform)'==''">Win64</Platform>
+        <TargetedPlatforms>3</TargetedPlatforms>
         <AppType>Library</AppType>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
@@ -34,6 +33,12 @@
         <Cfg_1>true</Cfg_1>
         <Base>true</Base>
     </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
+        <Cfg_1_Win64>true</Cfg_1_Win64>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
         <Cfg_2>true</Cfg_2>
         <CfgParent>Base</CfgParent>
@@ -49,8 +54,8 @@
         <DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
         <DynamicRTL>true</DynamicRTL>
         <UsePackages>true</UsePackages>
-        <IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
-        <FinalOutputDir>.\$(Platform)\$(Config)</FinalOutputDir>
+        <IntermediateOutputDir>..\..\$(Platform)\$(Config)</IntermediateOutputDir>
+        <FinalOutputDir>..\..\$(Platform)\$(Config)</FinalOutputDir>
         <BCC_wpar>false</BCC_wpar>
         <BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
         <BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
@@ -62,24 +67,29 @@
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <SanitizedProjectName>CalDevLib</SanitizedProjectName>
+        <VerInfo_Locale>1036</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <BCC_Defines>CALDEVLIBRARY_EXPORTS;$(BCC_Defines)</BCC_Defines>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;dsnap;dsnapcon;dsnapxml;FireDAC;FireDACADSDriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACIBDriver;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
         <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <BT_BuildType>Debug</BT_BuildType>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
         <BCC_PCHName_Clang>CalDevLibPCH1.h</BCC_PCHName_Clang>
         <Manifest_File>(vide)</Manifest_File>
         <AppDPIAwarenessMode>none</AppDPIAwarenessMode>
-        <FinalOutputDir>..\..\$(Platform)\$(Config)</FinalOutputDir>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindcompvclsmp;bindcompvclwinx;bindengine;CloudService;CustomIPTransport;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXInterBaseDriver;DBXMySQLDriver;DBXSqliteDriver;dsnap;dsnapcon;dsnapxml;FireDAC;FireDACADSDriver;FireDACCommon;FireDACCommonDriver;FireDACCommonODBC;FireDACIBDriver;FireDACMSAccDriver;FireDACMySQLDriver;FireDACPgDriver;FireDACSqliteDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inet;inetdb;inetdbxpress;RESTBackendComponents;RESTComponents;rtl;soapmidas;soaprtl;soapserver;tethering;vcl;vclactnband;vcldb;vcldsnap;vcledge;vclFireDAC;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
         <IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
         <BCC_PCHName_Clang>CalDevLibPCH1.h</BCC_PCHName_Clang>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
@@ -107,7 +117,12 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
-        <FinalOutputDir>C:\Users\bruno\Documents\Dev\kayros\testBorlandDll\Win32\</FinalOutputDir>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
+        <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
+        <UsingDelphiRTL>true</UsingDelphiRTL>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Manifest_File>(vide)</Manifest_File>
@@ -120,12 +135,17 @@
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <ItemGroup>
         <CppCompile Include="CalDev.cpp">
             <DependentOn>CalDev.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
+        <None Include="CalDevDefs.h">
+            <BuildOrder>4</BuildOrder>
+        </None>
         <CppCompile Include="CalDevLib.cpp">
             <BuildOrder>1</BuildOrder>
         </CppCompile>
@@ -215,13 +235,13 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\Win32\Debug\CalDevLib.dll" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="..\..\Win32\Debug\CalDevLib.dll" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>CalDevLib</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="..\Win32\Debug\CalDevLib.tds" Configuration="Debug" Class="DebugSymbols">
+                <DeployFile LocalName="..\..\Win32\Debug\CalDevLib.tds" Configuration="Debug" Class="DebugSymbols">
                     <Platform Name="Win32">
                         <RemoteName>CalDevLib.tds</RemoteName>
                         <Overwrite>true</Overwrite>
@@ -953,7 +973,7 @@
             </Deployment>
             <Platforms>
                 <Platform value="Win32">True</Platform>
-                <Platform value="Win64">False</Platform>
+                <Platform value="Win64">True</Platform>
             </Platforms>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>

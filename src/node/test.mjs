@@ -7,7 +7,7 @@ console.log('hello', caldevModule.hello('me'))
 try{
     console.log('t')
     caldevModule.init('toto')
-    console.log(rr)
+    console.log('init done !')
     console.log(caldevModule.hi())
     const r = caldevModule.runSimpleAsyncWorker(4).then(res=> console.log('res', `${res}`)).catch(e => console.error(e))
     console.log('rr',)

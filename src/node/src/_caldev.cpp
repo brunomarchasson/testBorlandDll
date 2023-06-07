@@ -1,16 +1,22 @@
 #include "windows.h"
+#include "CalDevDefs.h"
 #include <iostream>
 #include <string>
-#include "caldev.h"
-#include "CalDev.h"
+#include "_caldev.h"
 #include <libloaderapi.h>
 #include <strsafe.h>
 
-auto hdl = LoadLibraryA("../Win32/Debug/CalDevLib.dll");
+extern "C" {
+    typedef int (__stdcall *init_func_ptr)(const wchar_t * param1);
+    typedef wchar_t* (__stdcall*hi_func_ptr)();
+}
 
-auto init_func = reinterpret_cast<init_func_ptr>(GetProcAddress(hdl, "init"));
-auto hi_func = reinterpret_cast<hi_func_ptr>(GetProcAddress(hdl, "hi"));
-auto hello_func = reinterpret_cast<hi_func_ptr>(GetProcAddress(hdl, "hello"));
+auto hdl = LoadLibraryA("../Win64/Debug/CalDevLib.dll");
+// auto hdl;// = LoadLibraryA("C:/Users/bruno/Documents/Dev/kayros/testBorlandDll/Win64/Debug/CalDevLib.dll");
+auto init_func = reinterpret_cast<init_func_ptr>(GetProcAddress(hdl, "CalDev_init"));
+auto hi_func= reinterpret_cast<hi_func_ptr>(GetProcAddress(hdl, "CalDev_hi"));
+auto hello_func= reinterpret_cast<hi_func_ptr>(GetProcAddress(hdl, "CalDev_hello"));
+// auto CalDev_load = reinterpret_cast<hi_func_ptr>(GetProcAddress(hdl, "hello"));
 
 std::string helloUser( std::string name ) {
   return "Hello " + name + "!";
@@ -19,7 +25,6 @@ std::string helloUser( std::string name ) {
 void ErrorExit(LPCTSTR lpszFunction)
 {
     // Retrieve the system error message for the last-error code
-
     LPVOID lpMsgBuf;
     LPVOID lpDisplayBuf;
     DWORD dw = GetLastError();
@@ -49,16 +54,19 @@ void ErrorExit(LPCTSTR lpszFunction)
     ExitProcess(dw);
 }
 
-void init( std::wstring name ) {
-   hdl = LoadLibraryA("C:/Users/bruno/Documents/Dev/kayros/testBorlandDll/Win64/Debug/CalDevLib.dll");
-if (hdl == NULL)
-    ErrorExit(TEXT("LOAD DLL"));
-    //  init_func = reinterpret_cast<init_func_ptr>(GetProcAddress(hdl, "init"));
-
+void CalDev_init( std::wstring name ) {
+   if (hdl == NULL)
+        hdl = LoadLibraryA("C:/Users/bruno/Documents/Dev/kayros/testBorlandDll/Win64/Debug/CalDevLib.dll");
+    if (hdl == NULL)
+        ErrorExit(TEXT("LOAD DLL"));
+    init_func = reinterpret_cast<init_func_ptr>(GetProcAddress(hdl, "CalDev_init"));
+    hi_func= reinterpret_cast<hi_func_ptr>(GetProcAddress(hdl, "CalDev_hi"));
     printf("init%s", hdl);
     printf("init_func%s", init_func);
     init_func(name.c_str());
 }
-std::wstring hi( void ){
+
+
+std::wstring CalDev_hi( void ){
 return hi_func();
 }

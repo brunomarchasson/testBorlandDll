@@ -2,9 +2,9 @@
 #include <string>
 #include <codecvt>
 #include <locale>
-#include "caldev.h"
+#include "_caldev.h"
 #include "asyncWorker.h"
-
+// #include "calDevApi.h"
 
 std::string ws_to_UTF8 (const wchar_t *ws)
 {
@@ -84,10 +84,13 @@ Napi::String initDDd(const Napi::CallbackInfo& info) {
     printf("rr1");
 
     // call `helloUser` function from `greeting.cpp` file
+    
     std::string user = (std::string) info[0].ToString();
     printf("rr%s", user);
-
-    init( ws_from_UTF8(user.c_str()) );
+    
+    // CalDevApi api;
+    // api.init( ws_from_UTF8(user.c_str()).c_str());
+    CalDev_init( ws_from_UTF8(user.c_str()) );
     printf("rr3");
 
     // return new `Napi::String` value
@@ -98,7 +101,9 @@ Napi::String hizz(const Napi::CallbackInfo& info) {
    
     Napi::Env env = info.Env();
 // call `helloUser` function from `greeting.cpp` file
-    std::wstring result = hi();
+    std::wstring result = CalDev_hi();
+    // CalDevApi api;
+    // std::wstring result = api.hi();
     std::string r = ws_to_UTF8(result.c_str());
     // return Napi::String::New(env,"1" );
     // return new `Napi::String` value

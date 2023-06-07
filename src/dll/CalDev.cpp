@@ -9,6 +9,10 @@
 		 this->name = String(n);
  }
 
+   CalDev::CalDev(Type type, const wchar_t* id) {
+		 this->name = String(id);
+ }
+
  // Stack destructor
  CalDev::~CalDev() {
 

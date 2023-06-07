@@ -20,9 +20,11 @@
 #include <vcl.h>
 #include <windows.h>
 #include "CalDevLib.h"
+#include "CalDevDefs.h"
  #include "CalDev.h"
 #pragma hdrstop
 #pragma argsused
+
 
 int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved)
 {
@@ -31,15 +33,30 @@ int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void* lpReserved
 
  CalDev *instance;
 
-void __stdcall init(const wchar_t * name) {
+void __stdcall CalDev_init(const wchar_t * name) {
 		 instance = new CalDev(name);
  }
 
-
-wchar_t* __stdcall hi() {
+wchar_t* __stdcall CalDev_hi() {
 		 return instance->sayHi();
  }
 
-wchar_t* __stdcall hello(){
+wchar_t* __stdcall CalDev_hello(){
  return L"Wello";
  } ;
+
+ void __stdcall CalDev_load(Type type,const wchar_t * id ) {
+		 instance = new CalDev(type, id);
+ }
+
+ void __stdcall CalDev_set( ) {
+
+ }
+
+ P_RESULT __stdcall CalDev_compute(P_OPTIONS opts ) {
+	P_RESULT r;
+	r->str="computed";
+	if(opts->autoOut) r->str="computed with auto out";
+	r->num=42;
+	return r ;
+ }

@@ -53,7 +53,7 @@ int main()
     std::wstring widestr = std::wstring(name.begin(), name.end());
     const wchar_t* widecstr = widestr.c_str();
 
-    auto hdl = LoadLibraryA("C:/Users/bruno/Documents/Dev/kayros/testBorlandDll/Win32/Debug/CalDevLib.dll");
+    auto hdl = LoadLibraryA("C:/Users/bruno/Documents/Dev/kayros/testBorlandDll/Win64/Debug/CalDevLib.dll");
 
     if (hdl)
     {
